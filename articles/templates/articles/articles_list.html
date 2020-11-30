@@ -1,0 +1,25 @@
+
+
+
+
+
+{% extends "base.html" %}
+
+
+
+{% block 'title' %}
+  list
+{% endblock %}
+
+ {% block 'aaaa' %}
+
+        <h1>list</h1>
+        {% for article in articles %}
+          <div class="">
+            <a href="{% url 'articles_show' article.id%} ">{{article.title}}</a>
+            <p>{{article.snippet}}</p>
+              <p>{{article.date}}</p>
+          </div>
+        {% endfor %}
+
+  {% endblock %}
